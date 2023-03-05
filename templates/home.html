@@ -6,6 +6,25 @@
     <title>Boston House Pricing</title>
 </head>
 <body>
-    <h1>Welcome</h1>
+    <h1>Boston house price prediction</h1>
+
+    <form action="{{ url_for('predict') }}" method="POST">
+        <input name="CRIM" placeholder="CRIM" required="required"> <br>
+        <input name="ZN" placeholder="ZN" required="required"> <br>
+        <input name="INDUS" placeholder="INDUS" required="required"> <br>
+        <input name="CHAS" placeholder="CHAS" required="required"> <br>
+        <input name="NOX" placeholder="NOX" required="required"> <br>
+        <input name="RM" placeholder="RM" required="required"> <br>
+        <input name="AGE" placeholder="AGE" required="required"> <br>
+        <input name="DIS" placeholder="DIS" required="required"> <br>
+        <input name="RAD" placeholder="RAD" required="required"> <br>
+        <input name="TAX" placeholder="TAX" required="required"> <br>
+        <input name="PTRATIO" placeholder="PTRATIO" required="required"> <br>
+        <input name="B" placeholder="B" required="required"> <br>
+        <input name="LSTAT" placeholder="LSTAT" required="required"> <br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <h4>{{ prediction_text }}</h4>
 </body>
 </html>
